@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+// src/App.js
+import React from 'react';
+import MessageDisplay from './ChatComponents/MessageDisplay';
+import UserList from './ChatComponents/UserList';
+import ChatInput from './ChatComponents/ChatInput';
+import Auth from './ChatComponents/Auth'; // Import Auth component
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='app-container'>
+      <div className='chat-container'>
+        <div className='chat-header'>
+          <h2>Real-time Chat App</h2>
+          <Auth /> {/* Include Auth component */}
+        </div>
+        <MessageDisplay />
+        <UserList />
+        <ChatInput />
+      </div>
     </div>
   );
 }
